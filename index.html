@@ -309,7 +309,7 @@ html:not(.motion) .marquee .track{animation:none}
 .agent-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .agent-name{font-family:'Hanken Grotesk';font-weight:800;font-size:24px;letter-spacing:-.01em;color:#fff;text-transform:uppercase;line-height:1}
 .agent-role{font-family:'Fraunces';font-style:italic;font-weight:300;font-size:16px;color:var(--text-2)}
-.agent-detail{margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.03em;color:var(--text-3);line-height:1.7}
+.agent-detail{margin-top:auto;padding-top:14px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);line-height:1.7;border-top:1px dashed var(--line)}
 .agent-pill{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:30px;border:1px solid var(--line-2);color:var(--text-2);white-space:nowrap;flex:none}
 .agent-pill.live{border-color:var(--orange);color:#190a02;background:var(--orange);font-weight:500}
 .agents-more{margin-top:22px;display:flex;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--text-3)}
@@ -422,12 +422,13 @@ html:not(.motion) .marquee .track{animation:none}
       <p class="dek u-rise" data-rise>Each LiteCone agent owns one role in a financial-services process — live, in pilot, or rolling out. The roster keeps growing.</p>
     </div>
     <div class="agents" data-stagger>
-      <div class="agent-card"><div class="agent-top"><span class="agent-name">AURA</span></div><div class="agent-role">Intake &amp; Submission Agent</div></div>
-      <div class="agent-card"><div class="agent-top"><span class="agent-name">LEO</span></div><div class="agent-role">Life Insurance Underwriting</div></div>
-      <div class="agent-card"><div class="agent-top"><span class="agent-name">ARIS</span></div><div class="agent-role">Health Claims Adjudication</div></div>
-      <div class="agent-card"><div class="agent-top"><span class="agent-name">MARC</span></div><div class="agent-role">Life Claim</div></div>
-      <div class="agent-card"><div class="agent-top"><span class="agent-name">ERIC</span></div><div class="agent-role">Health Underwriting</div></div>
-      <div class="agent-card"><div class="agent-top"><span class="agent-name">ALEX</span></div><div class="agent-role">Bank Credit Underwriting</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">AURA</span></div><div class="agent-role">Intake &amp; Submission Agent</div><div class="agent-detail">Insurance · Banking · Capital Markets</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">LEO</span></div><div class="agent-role">Life Insurance Underwriting</div><div class="agent-detail">Insurance</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">ARIS</span></div><div class="agent-role">Health Claims Adjudication</div><div class="agent-detail">Insurance</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">MARC</span></div><div class="agent-role">Life Claim Adjudication</div><div class="agent-detail">Insurance</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">ERIC</span></div><div class="agent-role">Health Underwriting</div><div class="agent-detail">Insurance</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">ALEX</span></div><div class="agent-role">Banking Credit Underwriting</div><div class="agent-detail">Banking</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">RIO</span></div><div class="agent-role">Commercial Underwriting</div><div class="agent-detail">Insurance</div></div>
     </div>
     <div class="agents-more" data-rise><span class="plus">+</span> More coworkers in build — across claims, servicing, KYC, collections and beyond.</div>
   </div>
