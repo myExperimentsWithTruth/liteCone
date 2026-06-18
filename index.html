@@ -300,6 +300,22 @@ html:not(.motion) .marquee .track{animation:none}
 .cmp svg{flex:none}
 .cmp:hover{border-color:var(--orange);color:#fff;background:rgba(243,107,29,.06)}
 .compliance.gov{border-bottom:none;padding-bottom:0;margin-top:38px}
+/* coworkers roster */
+.agents{margin-top:54px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.agent-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 26px;min-height:130px;display:flex;flex-direction:column;gap:10px;position:relative;transition:background .4s var(--e-out)}
+.agent-card::before{content:"";position:absolute;left:0;top:0;width:0;height:2px;background:var(--orange);transition:width .55s var(--e-out)}
+.agent-card:hover{background:rgba(255,255,255,.02)}
+.agent-card:hover::before{width:100%}
+.agent-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.agent-name{font-family:'Hanken Grotesk';font-weight:800;font-size:24px;letter-spacing:-.01em;color:#fff;text-transform:uppercase;line-height:1}
+.agent-role{font-family:'Fraunces';font-style:italic;font-weight:300;font-size:16px;color:var(--text-2)}
+.agent-detail{margin-top:auto;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.03em;color:var(--text-3);line-height:1.7}
+.agent-pill{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:30px;border:1px solid var(--line-2);color:var(--text-2);white-space:nowrap;flex:none}
+.agent-pill.live{border-color:var(--orange);color:#190a02;background:var(--orange);font-weight:500}
+.agents-more{margin-top:22px;display:flex;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--text-3)}
+.agents-more .plus{font-family:'Fraunces';font-size:26px;color:var(--orange);line-height:1}
+@media (max-width:920px){.agents{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.agents{grid-template-columns:1fr}}
 @media (max-width:760px){.foot-big{grid-template-columns:1fr;gap:34px}.foot-cols{justify-content:flex-start}}
 @media (prefers-reduced-motion:reduce){.grain{animation:none}}
 </style>
@@ -329,7 +345,7 @@ html:not(.motion) .marquee .track{animation:none}
   <div class="nav">
     <a href="#top" class="brand" aria-label="LiteCone.ai home"><img src="assets/LiteCone_mark.png" alt="LiteCone.ai"></a>
     <nav class="links" aria-label="Primary">
-      <a href="#proof">Proof</a><a href="#zerotouch">Zero-Touch</a><a href="#how">How it works</a><a href="#governance">Governance</a>
+      <a href="#proof">Proof</a><a href="#agents">Agents</a><a href="#zerotouch">Zero-Touch</a><a href="#how">How it works</a><a href="#governance">Governance</a>
     </nav>
     <a href="#briefing" class="btn btn-o">Book a briefing <span class="ar">↗</span></a>
   </div>
@@ -397,6 +413,26 @@ html:not(.motion) .marquee .track{animation:none}
   </div>
 </section>
 
+<!-- ============ COWORKERS ============ -->
+<section id="agents" class="sec" data-index="02">
+  <div class="wrap">
+    <div class="sec-tag" data-rise><span class="n">02</span><span>Coworkers</span><span class="mid"></span><span>The agent roster</span></div>
+    <div class="lead">
+      <h2 class="u-rise" data-rise style="margin-top:0">A coworker for every role.</h2>
+      <p class="dek u-rise" data-rise>Each LiteCone agent owns one role in a financial-services process — live, in pilot, or rolling out. The roster keeps growing.</p>
+    </div>
+    <div class="agents" data-stagger>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">AURA</span></div><div class="agent-role">Intake &amp; Submission Agent</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">LEO</span></div><div class="agent-role">Life Insurance Underwriting</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">ARIS</span></div><div class="agent-role">Health Claims Adjudication</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">MARC</span></div><div class="agent-role">Life Claim</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">ERIC</span></div><div class="agent-role">Health Underwriting</div></div>
+      <div class="agent-card"><div class="agent-top"><span class="agent-name">ALEX</span></div><div class="agent-role">Bank Credit Underwriting</div></div>
+    </div>
+    <div class="agents-more" data-rise><span class="plus">+</span> More coworkers in build — across claims, servicing, KYC, collections and beyond.</div>
+  </div>
+</section>
+
 <!-- ============ QUOTE ============ -->
 <section class="quote">
   <div class="wrap q-full">
@@ -407,9 +443,9 @@ html:not(.motion) .marquee .track{animation:none}
 </section>
 
 <!-- ============ ZERO-TOUCH ============ -->
-<section id="zerotouch" class="sec zt" data-index="02">
+<section id="zerotouch" class="sec zt" data-index="03">
   <div class="wrap">
-    <div class="sec-tag" data-rise><span class="n">02</span><span>Zero-Touch</span><span class="mid"></span><span>Industry first</span></div>
+    <div class="sec-tag" data-rise><span class="n">03</span><span>Zero-Touch</span><span class="mid"></span><span>Industry first</span></div>
     <div class="zt-grid">
       <div>
         <h2 class="u-rise" data-rise style="margin-top:0">Zero-Touch processing for FSI.</h2>
@@ -430,9 +466,9 @@ html:not(.motion) .marquee .track{animation:none}
 </section>
 
 <!-- ============ HOW IT WORKS ============ -->
-<section id="how" class="sec" data-index="03">
+<section id="how" class="sec" data-index="04">
   <div class="wrap">
-    <div class="sec-tag" data-rise><span class="n">03</span><span>How it works</span><span class="mid"></span><span>Intake → auto-decision</span></div>
+    <div class="sec-tag" data-rise><span class="n">04</span><span>How it works</span><span class="mid"></span><span>Intake → auto-decision</span></div>
     <div class="lead">
       <h2 class="u-rise" data-rise style="margin-top:0">From intake to auto-decision — the journey.</h2>
       <p class="dek u-rise" data-rise>The case arrives in its native form. It leaves as a provable decision, cited line by line.</p>
@@ -484,9 +520,9 @@ html:not(.motion) .marquee .track{animation:none}
 </section>
 
 <!-- ============ GOVERNANCE ============ -->
-<section id="governance" class="sec" data-index="04">
+<section id="governance" class="sec" data-index="05">
   <div class="wrap">
-    <div class="sec-tag" data-rise><span class="n">04</span><span>Governance</span><span class="mid"></span><span>Compliant by design</span></div>
+    <div class="sec-tag" data-rise><span class="n">05</span><span>Governance</span><span class="mid"></span><span>Compliant by design</span></div>
     <div class="lead">
       <h2 class="u-rise" data-rise style="margin-top:0">The audit trail is built into the decision — not retrofitted.</h2>
       <p class="dek u-rise" data-rise>Every output passes the Five Brains. Defensible to an auditor, a regulator, and your board — line by line.</p>
@@ -729,7 +765,7 @@ html:not(.motion) .marquee .track{animation:none}
   var mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my;
   addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate('+mx+'px,'+my+'px) translate(-50%,-50%)';});
   (function loop(){cx+=(mx-cx)*0.18;cy+=(my-cy)*0.18;cur.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';requestAnimationFrame(loop);})();
-  document.querySelectorAll('a,button,.pcell,.brain,.fbar,.pillar,.ds-replay').forEach(function(el){
+  document.querySelectorAll('a,button,.pcell,.brain,.fbar,.pillar,.ds-replay,.agent-card').forEach(function(el){
     el.addEventListener('mouseenter',function(){cur.classList.add('hov');});
     el.addEventListener('mouseleave',function(){cur.classList.remove('hov');});
   });
